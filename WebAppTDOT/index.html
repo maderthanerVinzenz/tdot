@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTL Waidhofen</title>
+</head>
+<body>
+    <h2>Umfrage Tag der offenen Tür 2023</h2>
+    
+    <div class="center">
+        <div class="text">
+            <p id="AddData">Wie hat dir der Besuch bei der HTL gefallen?</p>
+            <p class="add">Bewertung von 1-10: </p> 
+            <input type="range" id="Range"><label class="CheckBText"></label>
+            <p class="add">Für welches Fach würdest du dich am meisten Interresieren?: </p> 
+            <input type="checkbox" id="Check1">SEW (Softwareentwicklung) <label class="CheckBText"></label>
+            <input type="checkbox" id="Check2">NWT (Netzwerktechnik) <label class="CheckBText"></label>
+            <input type="checkbox" id="Check3">INSY (Informationssysteme) <label class="CheckBText"></label>
+            <p class="add">Postleitzahl: </p> <input type="text" id="Pzahl" class="InputBox">
+            <p></p><button class="SubmitBtn" type="submit">Submit</button>
+        </div>
+
+    </div>
+
+    
+
+</body>
+<script>
+
+    //Checkbox script 
+    var checkbox1 = document.getElementById('Check1');
+    var checkbox2 = document.getElementById('Check2');
+    var checkbox3 = document.getElementById('Check3');
+
+
+
+    checkbox1.addEventListener('change', function() {
+        if (this.checked) {
+            checkbox2.checked = false;
+            checkbox3.checked = false;
+        } 
+    });
+
+    checkbox2.addEventListener('change', function() {
+        if (this.checked) {
+            checkbox1.checked = false;
+            checkbox3.checked = false;
+        } 
+    });
+
+    checkbox3.addEventListener('change', function() {
+        if (this.checked) {
+            checkbox1.checked = false;
+            checkbox2.checked = false;
+        } 
+    });
+</script>
+
+</html>
