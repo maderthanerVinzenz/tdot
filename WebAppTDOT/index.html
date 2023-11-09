@@ -4,31 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="modal.css">
     <title>HTL Waidhofen</title>
 </head>
 <body>
    
+    <div class="FlexBox">
+        <div class="center">
+            <div class="text">
+                <img src="Pictures/HTL.png" class="images">
+                <h2 id="titelU">Umfrage zum Tag der offenen Tür 2023</h2>
+                <p id="tit">Wir hoffen Ihnen hat der Besuch bei der HTL gefallen!</p><br>
+                <p class="add">Für welche Fäche würdest du dich am meisten Interresieren?: </p> 
+                <input type="checkbox" id="Check1">SEW<label class="CheckBText"></label>
+                <input type="checkbox" id="Check2">NWT<label class="CheckBText"></label>
+                <input type="checkbox" id="Check3">INSY<label class="CheckBText"></label>
+                <p class="add">Postleitzahl: <input type="text" id="Pzahl" class="InputBox"> </p> 
+                <p></p><button class="SubmitBtn" type="submit">Submit</button>
+            </div>
     
-    <div class="center">
-        <div class="text">
-            <h2 id="titelU">Umfrage Tag der offenen Tür 2023</h2>
-            <p id="tit">Wir hoffen Ihnen hat der Besuch bei der HTL gefallen!</p>
-            <p class="add">Für welches Fach würdest du dich am meisten Interresieren?: </p> 
-            <input type="checkbox" id="Check1">SEW (Softwareentwicklung) <label class="CheckBText"></label>
-            <input type="checkbox" id="Check2">NWT (Netzwerktechnik) <label class="CheckBText"></label>
-            <input type="checkbox" id="Check3">INSY (Informationssysteme) <label class="CheckBText"></label>
-            <p class="add">Postleitzahl: </p> <input type="text" id="Pzahl" class="InputBox">
-            <p></p><button class="SubmitBtn" type="submit">Submit</button>
         </div>
-
+    
+        <div class="sideBox">
+            <div class="text">
+                <h3>Fachbeschreibung</h3>
+                <br>
+                <button class="ModalBtn" data-title="La La Land" data-img="images/lalaLand (2).jpg"
+                    length = "200 Min" time="12:00"  age = "FSK 8" language="Deutsch, Englisch"
+                    date = "10.11.2023" haal = "A">
+                    <img class="movies" src="images/lalaLand (2).jpg" alt="La La Land"></button>
+            </div>
+        </div>
     </div>
+    
+    <div id="PicModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="ModalPic"></div>
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2 id="head-text">Kinoprogramm</h2>
+            </div>
+            <div class="modal-body">
+
+                <!--Eingabefeld-->
+                <div class="input-div one"> 
+                        <i class="text-modal">
+                            <div class="pic">
+                                <img src="images/lalaLand (2).jpg">
+                                <div class="text">
+                                    <p>Titel: </p>
+                                    <p>Filmlänge: </p>
+                                    <p>Erscheinungsjahr: </p>
+                                    <p>Altersfreigabe: </p>
+                                    <p>Sprache: </p>
+                                </div>
+                            </div>
+
+                            <div>
+                                <table id="tableModal">
+                                    <tr>
+                                        <th>Datum</th>
+                                        <th>Sprache</th>
+                                    </tr>
+                            
+                                    <tr>
+                                        <td>a</td>
+                                        <td>b</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>a</td>
+                                        <td>b</td>
+                                    </tr>
+                        
+                                   
+                                    </table>
+                            </div>
+                        </i>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+    </div>
+
 
     
 
 </body>
+
+
+
 <script>
 
     //Checkbox script 
+    /*
     var checkbox1 = document.getElementById('Check1');
     var checkbox2 = document.getElementById('Check2');
     var checkbox3 = document.getElementById('Check3');
@@ -55,6 +126,52 @@
             checkbox2.checked = false;
         } 
     });
+    */
+
+    var modalButtons = document.getElementsByClassName("ModalBtn");
+    var modal = document.getElementById("PicModal");
+    var modalText = document.querySelector(".text");
+
+    function openModal(event) {
+        var title = event.currentTarget.getAttribute("data-title");
+
+            var title = event.currentTarget.getAttribute("data-title");
+            var imageUrl = event.currentTarget.getAttribute("data-img");
+            var filmlänge = event.currentTarget.getAttribute("length");
+            var erscheinungsjahr = event.currentTarget.getAttribute("year");
+            var altersfreigabe = event.currentTarget.getAttribute("age");
+            var sprache = event.currentTarget.getAttribute("language");
+            var datum = event.currentTarget.getAttribute("date");
+            var zeit = event.currentTarget.getAttribute("time");
+            var saal = event.currentTarget.getAttribute("haal");
+
+            modalImage.src = imageUrl;
+            modalImage.alt = title;
+            modalText.innerHTML = `
+                <p>Titel: ${title}</p>
+                <p>Filmlänge: ${filmlänge}</p>
+                <p>Erscheinungsjahr: ${erscheinungsjahr}</p>
+                <p>Altersfreigabe: ${altersfreigabe}</p>   
+                <p>Sprache: ${sprache}</p>
+                
+            `;
+
+            modal.style.display = "block";
+        
+    }
+
+    //öffnen der Modale
+        modalButtons.forEach(function(button) {
+            button.addEventListener("click", openModal);
+        });
+
+        var closeButton = document.getElementsByClassName("close")[0];
+        closeButton.addEventListener("click", function() {
+            modal.style.display = "none";
+        });
+
+
+
 </script>
 
 </html>
