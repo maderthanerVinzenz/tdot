@@ -32,25 +32,32 @@
             if ($conn->connect_error) {
                 die("Connection failed: " . $conn->connect_error);
             }
+            $sql="SELECT LAST_INSERT_ID From t_persdef();"
+            $lastEntryID=$conn->query($sql);
+            if($lastEntryID!=null){               
+                $persID=$lastEntryID2+1;
+            }
+            else{
+                $persID=0;
+            }
+           
+            $sql = "Insert Into t_persdef (PLZ) Values(`$plz`)";
+                $result = $conn->query($sql);
             if($fachID1==1){
-                $sql = "Insert Into t_ka fachID, plz, timestamp Values(`$fachID1`,`$plz`,`$trueTimestamp`)";
+                $sql = "Insert Into t_umfrage (TST, FachID, PersID) Values(`$trueTimestamp`,`$fachID1`,`$persID`,)";
                 $result = $conn->query($sql);
             }
             if($fachID2==2){
-                $sql = "Insert Into t_ka fachID, plz, timestamp Values(`$fachID2`,`$plz`,`$trueTimestamp`)";
+                $sql = "Insert Into t_umfrage (TST, FachID, PersID) Values(`$trueTimestamp`,`$fachID1`,`$persID`,)";
                 $result = $conn->query($sql);
             }
             if($fachID3==3){
-                $sql = "Insert Into t_ka fachID, plz, timestamp Values(`$fachID3`,`$plz`,`$trueTimestamp`)";
+                $sql = "Insert Into t_umfrage (TST, FachID, PersID) Values(`$trueTimestamp`,`$fachID1`,`$persID`,)";
                 $result = $conn->query($sql);
             }
-               
-            
+              
         }
 
-        
-
-       
     ?>
     
     <div class="center">
