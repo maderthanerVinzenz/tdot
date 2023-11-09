@@ -11,14 +11,16 @@
     
     <div class="center">
         <div class="text">
-            <h2 id="titelU">Umfrage Tag der offenen Tür 2023</h2>
-            <p id="tit">Wir hoffen Ihnen hat der Besuch bei der HTL gefallen!</p>
-            <p class="add">Für welches Fach würdest du dich am meisten Interresieren?: </p> 
-            <input type="checkbox" id="Check1">SEW (Softwareentwicklung) <label class="CheckBText"></label>
-            <input type="checkbox" id="Check2">NWT (Netzwerktechnik) <label class="CheckBText"></label>
-            <input type="checkbox" id="Check3">INSY (Informationssysteme) <label class="CheckBText"></label>
-            <p class="add">Postleitzahl: </p> <input type="text" id="Pzahl" class="InputBox">
-            <p></p><button class="SubmitBtn" type="submit">Submit</button>
+            <form action="index.php" method="post">
+                <h2 id="titelU">Umfrage Tag der offenen Tür 2023</h2>
+                <p id="tit">Wir hoffen Ihnen hat der Besuch bei der HTL gefallen!</p>
+                <p class="add">Für welches Fach würdest du dich am meisten Interresieren?: </p> 
+                <input name="checkSEW"  type="checkbox" id="Check1">SEW (Softwareentwicklung) <label class="CheckBText"></label>
+                <input name="checkNWT"  type="checkbox" id="Check2">NWT (Netzwerktechnik) <label class="CheckBText"></label>
+                <input name="checkINSY"  type="checkbox" id="Check3">INSY (Informationssysteme) <label class="CheckBText"></label>
+                <p class="add">Postleitzahl: </p> <input type="text" id="Pzahl" name="Pzahl" class="InputBox">
+                <p></p><button class="SubmitBtn" type="submit">Submit</button>
+            </form>
         </div>
 
     </div>
