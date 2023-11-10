@@ -1,10 +1,26 @@
 
 
+CREATE TABLE t_Fragedef
+(
+    FragenID INTEGER AUTO_INCREMENT,
+    Bez VARCHAR(255),
+    PRIMARY KEY(FragenID)
+);
+
 CREATE TABLE t_Fachdef
 (
     FachID INTEGER AUTO_INCREMENT,
     Fach VARCHAR(30),
     PRIMARY KEY(FachID)
+);
+
+CREATE TABLE t_FachFrageDef
+(
+    FachID INTEGER,
+    FragenID INTEGER,
+    FOREIGN KEY(FragenID) REFERENCES t_Fragedef(FragenID),
+    FOREIGN KEY(FachID) REFERENCES t_Fachdef(FachID)
+    
 );
 
 CREATE TABLE t_Persdef
@@ -18,9 +34,9 @@ CREATE TABLE t_umfrage
 (
     ID INTEGER AUTO_INCREMENT,
     TST date NOT NULL,
-    FachID INTEGER NOT NULL,
+    FragenID INTEGER NOT NULL,
     PersID INTEGER NOT NULL,
     PRIMARY KEY(ID),
-    FOREIGN KEY(FachID) REFERENCES t_Fachdef(FachID),
+    FOREIGN KEY(FragenID) REFERENCES t_Fragedef(FragenID),
     FOREIGN KEY(PersID) REFERENCES t_Persdef(PersID)
 );
