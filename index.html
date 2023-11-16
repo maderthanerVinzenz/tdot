@@ -4,52 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
-<<<<<<< HEAD
-=======
     <link rel="stylesheet" href="modal.css">
->>>>>>> f0a65bb95b26450fd4858813db1846eb123815f3
     <title>HTL Waidhofen</title>
 </head>
 <body>
    
-<<<<<<< HEAD
-    
-=======
     <div class="FlexBox">
         <div class="center">
             <div class="text">
-                <img src="Pictures/HTL.png" class="images">
-                <h2 id="titelU">Umfrage zum Tag der offenen Tür 2023</h2>
-                <p id="tit">Wir hoffen Ihnen hat der Besuch bei der HTL gefallen!</p><br>
-                <p class="add">Für welche Fäche würdest du dich am meisten Interresieren?: </p> 
-                <input type="checkbox" id="Check1">SEW<label class="CheckBText"></label>
-                <input type="checkbox" id="Check2">NWT<label class="CheckBText"></label>
-                <input type="checkbox" id="Check3">INSY<label class="CheckBText"></label>
-                <p class="add">Postleitzahl: <input type="text" id="Pzahl" class="InputBox"> </p> 
-                <p></p><button class="SubmitBtn" type="submit">Submit</button>
+                <form action="index.php" method="post"></form>
+                    <img src="Pictures/HTL.png" class="images">
+                    <h2 id="titelU">Umfrage zum Tag der offenen Tür 2023</h2>
+                    <p id="tit">Wir hoffen Ihnen hat der Besuch bei der HTL gefallen!</p><br>
+                    <p class="add">Für welche Fäche würdest du dich am meisten Interresieren?: </p> 
+                    <input type="checkbox" name="checkSEW" id="Check1">SEW<label class="CheckBText"></label>
+                    <input type="checkbox" name="checkNWT" id="Check2">NWT<label class="CheckBText"></label>
+                    <input type="checkbox" name="checkINSY" id="Check3">INSY<label class="CheckBText"></label>
+                    <p class="add">Postleitzahl: <input type="text" id="Pzahl" class="InputBox"> </p> 
+                    <p></p><button class="SubmitBtn" type="submit">Submit</button>
+                </form>
             </div>
     
-<<<<<<< HEAD:WebAppTDOT/index.html
-=======
->>>>>>> f0a65bb95b26450fd4858813db1846eb123815f3
-    <div class="center">
-        <div class="text">
-            <form action="index.php" method="post">
-                <h2 id="titelU">Umfrage Tag der offenen Tür 2023</h2>
-                <p id="tit">Wir hoffen Ihnen hat der Besuch bei der HTL gefallen!</p>
-                <p class="add">Für welches Fach würdest du dich am meisten Interresieren?: </p> 
-                <input name="checkSEW"  type="checkbox" id="Check1">SEW (Softwareentwicklung) <label class="CheckBText"></label>
-                <input name="checkNWT"  type="checkbox" id="Check2">NWT (Netzwerktechnik) <label class="CheckBText"></label>
-                <input name="checkINSY"  type="checkbox" id="Check3">INSY (Informationssysteme) <label class="CheckBText"></label>
-                <p class="add">Postleitzahl: </p> <input type="text" id="Pzahl" name="Pzahl" class="InputBox">
-                <p></p><button class="SubmitBtn" type="submit">Submit</button>
-            </form>
-<<<<<<< HEAD
-        </div>
 
-    </div>
-=======
->>>>>>> bb3dc66f2cb7b76e4c44f994d9fc359f7e064453:index.html
         </div>
     
         <div class="sideBox">
@@ -121,11 +97,6 @@
     
 
 </body>
-<<<<<<< HEAD
-<script>
-
-    //Checkbox script 
-=======
 
 
 
@@ -133,7 +104,6 @@
 
     //Checkbox script 
     /*
->>>>>>> f0a65bb95b26450fd4858813db1846eb123815f3
     var checkbox1 = document.getElementById('Check1');
     var checkbox2 = document.getElementById('Check2');
     var checkbox3 = document.getElementById('Check3');
@@ -160,8 +130,6 @@
             checkbox2.checked = false;
         } 
     });
-<<<<<<< HEAD
-=======
     */
 
     var modalButtons = document.getElementsByClassName("ModalBtn");
@@ -208,7 +176,6 @@
 
 
 
->>>>>>> f0a65bb95b26450fd4858813db1846eb123815f3
 </script>
 
 </html>
