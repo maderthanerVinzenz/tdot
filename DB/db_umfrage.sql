@@ -16,8 +16,10 @@ CREATE TABLE t_Fachdef
 
 CREATE TABLE t_FachFrageDef
 (
+    FachFrageID INTEGER AUTO_INCREMENT,
     FachID INTEGER,
     FragenID INTEGER,
+    PRIMARY KEY(FachFrageID)
     FOREIGN KEY(FragenID) REFERENCES t_Fragedef(FragenID),
     FOREIGN KEY(FachID) REFERENCES t_Fachdef(FachID)
     
