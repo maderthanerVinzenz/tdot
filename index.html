@@ -8,11 +8,11 @@
     <title>HTL Waidhofen</title>
 </head>
 <body>
-   
     <div class="FlexBox">
         
         <div class="center">
             <div class="text">
+
                 <img src="Pictures/HTL.png" class="images">
                 <h2 id="titelU">Umfrage zum Tag der offenen Tür 2023</h2>
                 <p class="add">Für welche Fächer würdest du dich am meisten Interresieren?: </p> 
@@ -55,7 +55,6 @@
                 <button class="showQuestionsBtn"><img class="imgBtn" src="Pictures/dropdown-removebg-preview.png"></button>
                 <p class="questions hidden"><input type="checkbox" id="check1" class="checkB">Frage1</p><p></p>
             </div>
-
 
             <div class="text">
                 <p class="add">Postleitzahl: <input type="text" id="Pzahl" class="InputBox"> </p> 
@@ -103,13 +102,14 @@
     </div>
 
 
+
     
 
 </body>
 
 <script>
 
-        document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', function () {
         var showQuestionsBtns = document.querySelectorAll('.showQuestionsBtn');
 
             showQuestionsBtns.forEach(function (showQuestionsBtn) {
@@ -126,6 +126,7 @@
                 });
             });
         });
+
 
     //Checkbox script 
     /*
