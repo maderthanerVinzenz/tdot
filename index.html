@@ -8,15 +8,23 @@
     <title>HTL Waidhofen</title>
 </head>
 <body>
+<<<<<<< HEAD
    
     <div class="FlexBox">
         <div class="center">
             <div class="text">
                 <form action="index.php" method="post"></form>
+=======
+    <div class="FlexBox">
+        <div class="center">
+            <div class="text">
+                <form action="index.php" method="post">
+>>>>>>> 9f7080830d3f40a2f74708039ebc0b1a0c35164e
                     <img src="Pictures/HTL.png" class="images">
                     <h2 id="titelU">Umfrage zum Tag der offenen Tür 2023</h2>
                     <p id="tit">Wir hoffen Ihnen hat der Besuch bei der HTL gefallen!</p><br>
                     <p class="add">Für welche Fäche würdest du dich am meisten Interresieren?: </p> 
+<<<<<<< HEAD
                     <input type="checkbox" name="checkSEW" id="Check1">SEW<label class="CheckBText"></label>
                     <input type="checkbox" name="checkNWT" id="Check2">NWT<label class="CheckBText"></label>
                     <input type="checkbox" name="checkINSY" id="Check3">INSY<label class="CheckBText"></label>
@@ -28,61 +36,41 @@
 
         </div>
     
+=======
+                    <input name="checkSEW" type="checkbox" id="Check1">SEW<label class="CheckBText"></label>
+                    <input name="checkNWT" type="checkbox" id="Check2">NWT<label class="CheckBText"></label>
+                    <input name="checkINSY" type="checkbox" id="Check3">INSY<label class="CheckBText"></label>
+                    <p class="add">Postleitzahl: <input type="text" id="Pzahl" name="Pzahl" class="InputBox"> </p> 
+                    <p></p><button class="SubmitBtn" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+>>>>>>> 9f7080830d3f40a2f74708039ebc0b1a0c35164e
         <div class="sideBox">
             <div class="text">
                 <h3>Fachbeschreibung</h3>
                 <br>
-                <button class="ModalBtn" data-title="La La Land" data-img="images/lalaLand (2).jpg"
-                    length = "200 Min" time="12:00"  age = "FSK 8" language="Deutsch, Englisch"
-                    date = "10.11.2023" haal = "A">
-                    <img class="movies" src="images/lalaLand (2).jpg" alt="La La Land"></button>
+                <button class="ModalBtn" header="Netzwerktechnik" txt="fachwas">NWT</button>
             </div>
         </div>
     </div>
     
-    <div id="PicModal" class="modal">
+    <div id="BspModal" class="modal">
         <!-- Modal content -->
         <div class="modal-content">
             <div class="ModalPic"></div>
             <div class="modal-header">
                 <span class="close">&times;</span>
-                <h2 id="head-text">Kinoprogramm</h2>
+                <h2 id="head-text">Fachbeschreibung</h2>
             </div>
             <div class="modal-body">
 
                 <!--Eingabefeld-->
                 <div class="input-div one"> 
                         <i class="text-modal">
-                            <div class="pic">
-                                <img src="images/lalaLand (2).jpg">
-                                <div class="text">
-                                    <p>Titel: </p>
-                                    <p>Filmlänge: </p>
-                                    <p>Erscheinungsjahr: </p>
-                                    <p>Altersfreigabe: </p>
-                                    <p>Sprache: </p>
-                                </div>
-                            </div>
+                            <div class="text">
+                                <p>TextInhalt: </p>
 
-                            <div>
-                                <table id="tableModal">
-                                    <tr>
-                                        <th>Datum</th>
-                                        <th>Sprache</th>
-                                    </tr>
-                            
-                                    <tr>
-                                        <td>a</td>
-                                        <td>b</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>a</td>
-                                        <td>b</td>
-                                    </tr>
-                        
-                                   
-                                    </table>
                             </div>
                         </i>
                     </div>
@@ -91,16 +79,19 @@
         </div>
             
     </div>
-
->>>>>>> f0a65bb95b26450fd4858813db1846eb123815f3
-
-    
-
 </body>
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 9f7080830d3f40a2f74708039ebc0b1a0c35164e
 
 <script>
+
+
+    var modalButtons = document.querySelectorAll(".ModalBtn");
+    var modal = document.getElementById("BspModal");
+    var modalText = document.querySelector(".text-modal");
 
     //Checkbox script 
     /*
@@ -137,45 +128,33 @@
     var modalText = document.querySelector(".text");
 
     function openModal(event) {
-        var title = event.currentTarget.getAttribute("data-title");
+        var txt = event.currentTarget.getAttribute("txt");
+        var head = event.currentTarget.getAttribute("header");
 
-            var title = event.currentTarget.getAttribute("data-title");
-            var imageUrl = event.currentTarget.getAttribute("data-img");
-            var filmlänge = event.currentTarget.getAttribute("length");
-            var erscheinungsjahr = event.currentTarget.getAttribute("year");
-            var altersfreigabe = event.currentTarget.getAttribute("age");
-            var sprache = event.currentTarget.getAttribute("language");
-            var datum = event.currentTarget.getAttribute("date");
-            var zeit = event.currentTarget.getAttribute("time");
-            var saal = event.currentTarget.getAttribute("haal");
+        modalText.innerHTML = `
+            <h2>${head}</h2>
+            <p>${txt}</p>
+                    
+        `;
 
-            modalImage.src = imageUrl;
-            modalImage.alt = title;
-            modalText.innerHTML = `
-                <p>Titel: ${title}</p>
-                <p>Filmlänge: ${filmlänge}</p>
-                <p>Erscheinungsjahr: ${erscheinungsjahr}</p>
-                <p>Altersfreigabe: ${altersfreigabe}</p>   
-                <p>Sprache: ${sprache}</p>
-                
-            `;
-
-            modal.style.display = "block";
-        
+        modal.style.display = "block";
+            
     }
 
-    //öffnen der Modale
-        modalButtons.forEach(function(button) {
-            button.addEventListener("click", openModal);
-        });
+    modalButtons.forEach(function(button) {
+        button.addEventListener("click", openModal);
+    });
 
-        var closeButton = document.getElementsByClassName("close")[0];
-        closeButton.addEventListener("click", function() {
-            modal.style.display = "none";
-        });
+    var closeButton = document.getElementsByClassName("close")[0];
+    closeButton.addEventListener("click", function() {
+        modal.style.display = "none";
+    });
+
+<<<<<<< HEAD
 
 
-
+=======
+>>>>>>> 9f7080830d3f40a2f74708039ebc0b1a0c35164e
 </script>
 
 </html>
