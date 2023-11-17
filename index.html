@@ -9,63 +9,64 @@
 </head>
 <body>
     <div class="FlexBox">
-        
-        <div class="center">
-            <div class="text">
+        <form action="index.php" method="post">
+            <div class="center">
+                <div class="text">
 
-                <img src="Pictures/HTL.png" class="images">
-                <h2 id="titelU">Umfrage zum Tag der offenen Tür 2023</h2>
-                <p class="add">Für welche Fächer würdest du dich am meisten Interresieren?: </p> 
-                <p>Klicke auf die Symbole neben den Fächern um die Fragen an zu zeigen</p>
+                    <img src="Pictures/HTL.png" class="images">
+                    <h2 id="titelU">Umfrage zum Tag der offenen Tür 2023</h2>
+                    <p class="add">Für welche Fächer würdest du dich am meisten Interresieren?: </p> 
+                    <p>Klicke auf die Symbole neben den Fächern um die Fragen an zu zeigen</p>
+                </div>
+
+                <div class="groupCheck">
+                    <input type="checkbox" id="checkA_1" class="checkB">Softwareentwicklung
+                    <button class="showQuestionsBtn"><img class="imgBtn" src="Pictures/dropdown-removebg-preview.png"></button>
+                    <p class="questions hidden"><input type="checkbox" id="check1" class="checkB" name="frage1" value="frage1">Frage1</p><p></p>
+                    <p class="questions hidden"><input type="checkbox" id="check2" class="checkB" name="frage2" value="frage1">Frage2</p><p></p>
+                    <p class="questions hidden"><input type="checkbox" id="check3" class="checkB" name="frage3" value="frage1">Frage3</p><p></p>
+
+
+                    <input type="checkbox" id="checkA_2" class="checkB">Künstliche Intelligenz
+                    <button class="showQuestionsBtn"><img class="imgBtn" src="Pictures/dropdown-removebg-preview.png"></button>
+                    <p class="questions hidden"><input type="checkbox" id="check2" class="checkB">Frage1</p><p></p>
+
+
+                    <input type="checkbox" id="checkA_3" class="checkB">Netzwerktechnik
+                    <button class="showQuestionsBtn"><img class="imgBtn" src="Pictures/dropdown-removebg-preview.png"></button>
+                    <p class="questions hidden"><input type="checkbox" id="check3" class="checkB">Frage1</p><p></p>
+
+                    <input type="checkbox" id="checkA_4" class="checkB">Medientechnik
+                    <button class="showQuestionsBtn"><img class="imgBtn" src="Pictures/dropdown-removebg-preview.png"></button>
+                    <p class="questions hidden"><input type="checkbox" id="check4" class="checkB">Frage1</p><p></p>
+
+                    <input type="checkbox" id="checkA_5" class="checkB">Cyber-Security
+                    <button class="showQuestionsBtn"><img class="imgBtn" src="Pictures/dropdown-removebg-preview.png"></button>
+                    <p class="questions hidden"><input type="checkbox" id="check5" class="checkB">Frage1</p><p></p>
+
+                    <input type="checkbox" id="checkA_6" class="checkB">Informationssysteme
+                    <button class="showQuestionsBtn"><img class="imgBtn" src="Pictures/dropdown-removebg-preview.png"></button>
+                    <p class="questions hidden"><input type="checkbox" id="check6" class="checkB">Frage1</p><p></p>
+
+                    <input type="checkbox" id="checkA_7" class="checkB">Systemtechnik
+                    <button class="showQuestionsBtn"><img class="imgBtn" src="Pictures/dropdown-removebg-preview.png"></button>
+                    <p class="questions hidden"><input type="checkbox" id="check7" class="checkB">Frage1</p><p></p>
+
+                    <input type="checkbox" id="checkA_8" class="checkB">Projektmanagement
+                    <button class="showQuestionsBtn"><img class="imgBtn" src="Pictures/dropdown-removebg-preview.png"></button>
+                    <p class="questions hidden"><input type="checkbox" id="check8" class="checkB">Frage1</p><p></p>
+
+                    <input type="checkbox" id="checkA_9" class="checkB">Schule Allgemeines
+                    <button class="showQuestionsBtn"><img class="imgBtn" src="Pictures/dropdown-removebg-preview.png"></button>
+                    <p class="questions hidden"><input type="checkbox" id="check9" class="checkB">Frage1</p><p></p>
+                </div>
+
+                <div class="text">
+                    <p class="add">Postleitzahl: <input type="text" id="Pzahl" class="InputBox"> </p> 
+                    <p></p><button class="SubmitBtn" type="submit">Submit</button>
+                </div>
             </div>
-
-            <div class="groupCheck">
-                <input type="checkbox" id="checkA_1" class="checkB">Softwareentwicklung
-                <button class="showQuestionsBtn"><img class="imgBtn" src="Pictures/dropdown-removebg-preview.png"></button>
-                <p class="questions hidden"><input type="checkbox" id="check1" class="checkB">Frage1</p><p></p>
-
-                <input type="checkbox" id="checkA_2" class="checkB">Künstliche Intelligenz
-                <button class="showQuestionsBtn"><img class="imgBtn" src="Pictures/dropdown-removebg-preview.png"></button>
-                <p class="questions hidden"><input type="checkbox" id="check2" class="checkB">Frage1</p><p></p>
-
-
-                <input type="checkbox" id="checkA_3" class="checkB">Netzwerktechnik
-                <button class="showQuestionsBtn"><img class="imgBtn" src="Pictures/dropdown-removebg-preview.png"></button>
-                <p class="questions hidden"><input type="checkbox" id="check3" class="checkB">Frage1</p><p></p>
-
-                <input type="checkbox" id="checkA_4" class="checkB">Medientechnik
-                <button class="showQuestionsBtn"><img class="imgBtn" src="Pictures/dropdown-removebg-preview.png"></button>
-                <p class="questions hidden"><input type="checkbox" id="check4" class="checkB">Frage1</p><p></p>
-
-                <input type="checkbox" id="checkA_5" class="checkB">Cyber-Security
-                <button class="showQuestionsBtn"><img class="imgBtn" src="Pictures/dropdown-removebg-preview.png"></button>
-                <p class="questions hidden"><input type="checkbox" id="check5" class="checkB">Frage1</p><p></p>
-
-                <input type="checkbox" id="checkA_6" class="checkB">Informationssysteme
-                <button class="showQuestionsBtn"><img class="imgBtn" src="Pictures/dropdown-removebg-preview.png"></button>
-                <p class="questions hidden"><input type="checkbox" id="check6" class="checkB">Frage1</p><p></p>
-
-                <input type="checkbox" id="checkA_7" class="checkB">Systemtechnik
-                <button class="showQuestionsBtn"><img class="imgBtn" src="Pictures/dropdown-removebg-preview.png"></button>
-                <p class="questions hidden"><input type="checkbox" id="check7" class="checkB">Frage1</p><p></p>
-
-                <input type="checkbox" id="checkA_8" class="checkB">Projektmanagement
-                <button class="showQuestionsBtn"><img class="imgBtn" src="Pictures/dropdown-removebg-preview.png"></button>
-                <p class="questions hidden"><input type="checkbox" id="check8" class="checkB">Frage1</p><p></p>
-
-                <input type="checkbox" id="checkA_9" class="checkB">Schule Allgemeines
-                <button class="showQuestionsBtn"><img class="imgBtn" src="Pictures/dropdown-removebg-preview.png"></button>
-                <p class="questions hidden"><input type="checkbox" id="check9" class="checkB">Frage1</p><p></p>
-            </div>
-
-            <div class="text">
-                <p class="add">Postleitzahl: <input type="text" id="Pzahl" class="InputBox"> </p> 
-                <p></p><button class="SubmitBtn" type="submit">Submit</button>
-            </div>
-
-            
-        </div>
-
+        </form>
         <div class="sideBox">
             <div class="text">
                 <h3>Fachbeschreibung</h3>
